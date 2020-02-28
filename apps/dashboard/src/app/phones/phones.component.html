@@ -1,0 +1,18 @@
+<div class="container d-flex mt-3">
+  <div class="col-6">
+    <phones-phones-list
+      [phones]="phones$ | async"
+      (selected)="selectPhone($event)"
+      (deleted)="deletePhone($event)"
+    >
+    </phones-phones-list>
+  </div>
+  <div class="col-6">
+    <phones-phones-details
+      [phone]="selectedPhone"
+      [form]="form"
+      (saved)="savePhone($event)"
+      (cancelled)="cancel()"
+    ></phones-phones-details>
+  </div>
+</div>

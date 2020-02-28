@@ -1,0 +1,21 @@
+<div
+  class="d-flex justify-content-center align-content-center mt-5"
+  *ngIf="currentPhone | async as phone"
+>
+  <button mat-button [routerLink]="['/phones']" routerLinkActive="active">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="col-4">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>{{ originalTitle }}</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h3>Phone Brand:</h3>
+      <p mat-line>{{ phone.brand }}</p>
+      <h3>Phone Name:</h3>
+      <p mat-line>{{ phone.name }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

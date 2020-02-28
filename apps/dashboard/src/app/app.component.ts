@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@phones/core-data';
 
 @Component({
   selector: 'phones-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dashboard';
+  title = 'Phones MDV';
+
+  links = [
+    { path: '/phones', icon: 'work', title: 'Phones'}
+  ]
+
+  userIsAuthenticated$ = this.authService.isAuthenticated$;
+  constructor(private authService: AuthService) {}
 }

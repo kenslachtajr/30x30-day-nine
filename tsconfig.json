@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@phones/ui-libraries": ["libs/ui-libraries/src/index.ts"],
+      "@phones/material": ["libs/material/src/index.ts"],
+      "@phones/core-data": ["libs/core-data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

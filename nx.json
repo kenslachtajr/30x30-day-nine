@@ -17,6 +17,16 @@
     "dashboard-e2e": {
       "tags": [],
       "implicitDependencies": ["dashboard"]
+    },
+    "ui-libraries": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "core-data": {
+      "tags": []
     }
   }
 }
+

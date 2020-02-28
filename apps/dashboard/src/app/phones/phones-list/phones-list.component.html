@@ -1,0 +1,32 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Phones</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let phone of phones"
+        [routerLink]="[phone.id]"
+        class="mat-list-option border-bottom"
+      >
+        <h3 mat-line>{{ phone.brand }}</h3>
+        <p mat-line>{{ phone.name }}</p>
+        <button
+          class="mr-2"
+          mat-mini-fab
+          (click)="selected.emit(phone); $event.stopImmediatePropagation()"
+        >
+          <mat-icon>launch</mat-icon>
+        </button>
+        <button
+          mat-mini-fab
+          (click)="deleted.emit(phone); $event.stopImmediatePropagation()"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
